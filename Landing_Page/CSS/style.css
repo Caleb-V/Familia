@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #b71c1c;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;   
+}
+
+.container{
+    width: 90%;
+    max-width: 1200%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.principal {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.video-fondo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #b71c1c;
+    justify-self: center;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+.cont-texto {
+    max-width: 800px;
+    display: grid;
+    --padding-container:0;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.cont-texto h1 {
+	font-size: 60px;
+	color: #ffffff;
+    font-family: 'Poppins', sans-serif;   
+	font-weight: 700;
+}
+
+.ola {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.ga{
+    display: flex;
+    width: 1fr;
+    height: 600px;
+  }
+
+  .gale h1 {
+    font-size: 40px;
+    color: #b71c1c;
+    font-family: 'Poppins', sans-serif;   
+    font-weight: 700;
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #ffe5e5; 
+    border-radius: 12px;        
+    margin: 20px auto;      
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+}
+
+  .ga img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .9;
+        transition: .5s ease;
+        border: 5px solid #b42b2b7e;          
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        border-radius: 8px;                
+        margin: 5px;                        
+  }
+  
+  .ga img:hover{
+    cursor: crosshair;
+    width: 400px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+  .ga.container {
+    padding: 30px 0;
+}
+
+.galeria-mobile {
+    display: none;
+  }
+
+.galeria {
+	display: flex;
+	width: 88%;
+	margin: auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+
+.galeria .foto {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin-bottom: 35px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+	transition: 0.6s ease;
+}
+.galeria .foto:hover {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.foto img {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to top, #ce8d9296 0%, #922424a1 100%);
+	width: 100%;
+	height: 0;
+	transition: 0.55s ease;
+	overflow: hidden;
+}
+.overlay h2 {
+	color: #fff;
+	font-size: 25px;
+    font-family: 'Poppins', sans-serif;   
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.foto:hover .overlay {
+	height: 100%;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/*---------------------*/
+
+.contenedor-modal.active {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.contenedor-modal.active img {
+	z-index: 3;
+	width: 700px;
+	height: 700px;
+}
+
+.contenedor-modal.active::after {
+	position: fixed;
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(211, 211, 211, 0.459);
+}
+
+.contenedor{
+    position: relative;
+    min-height: 100vh;
+}
+
+.contenedor h1{
+    font-size: 40px;
+    color: #b71c1c;
+    font-family: 'Poppins', sans-serif;   
+    font-weight: 700;
+    padding: 20px 30px;
+    text-align: center;
+    background-color: #ffe5e5; 
+    border-radius: 12px;        
+    margin: 20px auto;      
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+}
+
+
+.contenedor .video-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 88%;
+        margin: auto;
+        padding: 20px 0;
+}
+
+.contenedor .video-container .video{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        margin-bottom: 35px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+        transition: 0.6s ease;
+        overflow: hidden;
+        cursor: pointer;
+}
+
+.contenedor .video-container .video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.contenedor .video-container .video:hover video{
+    transform: scale(1.1);
+}
+
+.popup-video{
+    display: none;
+}
+
+.contenedor .popup-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor .popup-video video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid #680b0b;
+    object-fit: cover;
+}
+
+.contenedor .popup-video span{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .galeria-escritorio{
+        display: none;
+    }
+
+    .galeria-mobile {
+        display: block;
+      }
+
+    .gale h1{
+        padding: 20px 30px;
+    }
+    .contenedor .video-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .contenedor .video-container .video {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .contenedor .video-container .video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
