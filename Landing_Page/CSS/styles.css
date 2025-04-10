@@ -50,6 +50,18 @@ body{
     align-items: center;
 }
 
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 2px; 
+  }
+  
+.Logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+  }
+
 .nav_title{
     font-weight: 300;
 }
@@ -159,11 +171,17 @@ body{
     gap: 1em;
     overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    align-items: center;
 }
 
 .about_icon{
-    width: 40px;
+    width: 100%;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px;
 }
 
 /* knowledge*/
@@ -196,6 +214,7 @@ body{
 .knowledge_img{
     width: 100%;
     display: block;
+    border-radius: 20px;
 }
 
 /* Price*/
@@ -240,6 +259,10 @@ body{
     margin-bottom: 50px;
     color: var(--color-items);
     text-align: justify;
+    hyphens: auto;  
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    
 }
 
 .price_cta{
@@ -253,7 +276,9 @@ body{
 }
 
 .price_price{
-    font-size: x-large;
+    font-size:xx-large;
+    background-color: #b71c1c7e;
+    border-radius: 20px;
 }
 
 /* Testimony*/
@@ -600,6 +625,10 @@ body{
     .hero_title{
         font-size: 1rem;
     }
+
+    .Logo-img {
+        height: 60px;
+      }
 
     .hero_parrafo{
         font-size: 1rem;
