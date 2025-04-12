@@ -13,6 +13,11 @@
 </head>
 <body>
     <header id="hero" class="hero">
+        <video autoplay muted loop playsinline class="hero_video">
+            <source src="./galeria_img/Vídeos Forum.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+
         <nav class="nav container">
             <div class="nav_logo">
                 <img class="Logo-img" src="./images/Imagen1-removebg-preview.png" alt="Logo">
@@ -23,8 +28,12 @@
                 <li class="nav_items">
                     <a href="#" class="nav_links" onclick="location.reload();">Inicio</a>
                 </li>
-                <li class="nav_items">
-                    <a href="#about" class="nav_links">Acerca de</a>
+                <li class="nav_items nav_dropdown">
+                    <a href="#about" class="nav_links">Quiénes Somos</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#about" class="nav_links">Quiénes somos</a></li>
+                        <li><a href="./galeria.html" class="nav_links">Galería</a></li>
+                    </ul>
                 </li>
                 <li class="nav_items">
                     <a href="#footer" class="nav_links">Contacto</a>
